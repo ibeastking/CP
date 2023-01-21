@@ -8,11 +8,14 @@
 
 //! Question Tag -> Array, Hash Table, Stack, Monotonic Stack
 
+//! The solution with stack is preferred over no stack because the time complexity of the code is O(n*m) in the first case of
+//! no stack whereas the second solution with stack has time complexity of O(n+m)
+
 #include <bits\stdc++.h>
 using namespace std;
 
 //* no stack
-class Solution
+class NoStack
 {
 public:
     vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
@@ -44,7 +47,7 @@ public:
 };
 
 //* using stack
-class Solution2
+class Stack
 {
 public:
     vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
