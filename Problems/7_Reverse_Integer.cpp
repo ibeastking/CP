@@ -19,12 +19,13 @@ public:
 
         while (n > 0)
         {
-
+            //! check if multiplying current number with 10 will cause number to overflow
             if (num > INT_MAX / 10 or num == INT_MAX / 10 and n % 10 > 7)
             {
                 return 0;
             }
 
+            //! check if multiplying current number with 10 will cause number to got below min
             if (num < INT_MIN / 10 or num == INT_MIN / 10 and n % 10 < -8)
             {
                 return 0;
