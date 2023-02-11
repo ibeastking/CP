@@ -8,17 +8,20 @@
 #include <bits\stdc++.h>
 using namespace std;
 
-class solution
+class Solution
 {
 public:
     bool checkInclusion(string s1, string s2)
     {
-
         vector<int> freq1(26, 0);
         vector<int> freq2(26, 0);
 
-        int left = 0;
-        int right = 0;
+        //! if length of s1 is greater then there is not permutation
+        if (s1.length() > s2.length())
+            return false;
+
+        int left = 0;  //* stores the character whose address needs to be decremented
+        int right = 0; //* stores the character whose address needs to be added
 
         while (right < s1.length())
         {
@@ -27,35 +30,26 @@ public:
             right++;
         }
 
+        //! right exceeds length of length of s1 so we should we decrement it by 1
         right--;
 
         while (right < s2.length())
         {
             if (freq1 == freq2)
-                return true;
+                return true; //* if both frequency match, it means s1 is permutation of s2
 
+            //* if we reach here then current substring is not a permutation
+            //* so we move right to next location
             right++;
             if (right != s2.length())
-                freq2[s2[right] - 'a']--;
+            {
+                freq2[s2[right] - 'a']++; //* increment the frequency of current character in right
+            }
 
-            freq2[s2[left] - 'a']--;
+            freq2[s2[left] - 'a']--; //* decrement the frequency of leftmost character
             left++;
         }
 
         return false;
     }
 };
-
-int main()
-{
-    solution s;
-    string s1, s2;
-    cout << "Enter String 1: ";
-    cin >> s1;
-    cout << "Enter String 2: ";
-    cin >> s2;
-
-    cout << s.checkInclusion(s1, s2);
-
-    return 0;
-}
