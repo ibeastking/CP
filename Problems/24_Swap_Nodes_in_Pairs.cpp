@@ -37,7 +37,7 @@ public:
         {
             swap(slow->val, fast->val);
 
-            if (slow->next != nullptr)
+            if (fast->next != nullptr)
             {
                 slow = fast->next;
                 fast = slow->next;
