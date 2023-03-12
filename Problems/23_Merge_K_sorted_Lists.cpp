@@ -103,3 +103,37 @@ public:
         return head;
     }
 };
+
+class Solution1
+{
+public:
+    ListNode *mergeKLists(vector<ListNode *> &lists)
+    {
+        map<int, int> m;
+
+        for (auto &i : lists)
+        {
+            while (i)
+            {
+                m[i->val]++;
+                i = i->next;
+            }
+        }
+
+        ListNode dummy(0);
+        ListNode *tail = &dummy;
+        if (!m.size())
+            return NULL;
+
+        for (auto &itr : m)
+        {
+            for (int i = 0; i < itr.second; i++)
+            {
+                tail->next = new ListNode(itr.first);
+                tail = tail->next;
+            }
+        }
+
+        return dummy.next;
+    }
+};
