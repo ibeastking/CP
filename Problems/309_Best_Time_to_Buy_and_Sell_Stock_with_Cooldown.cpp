@@ -18,13 +18,13 @@ public:
     {
 
         //* to make highest profit you need to buy the stock at lowest price, mini stores lowest price
-        int mini = stocks[0];
+        int buy = stocks[0];
         int profit = 0;
 
         for (int i = 1; i < stocks.size(); i++)
         {
-            profit = max(profit, stocks[i] - mini);
-            mini = min(mini, stocks[i]);
+            profit = max(profit, stocks[i] - buy);
+            buy = min(buy, stocks[i]);
         }
 
         return profit;

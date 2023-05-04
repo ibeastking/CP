@@ -22,7 +22,6 @@ public:
 
         for (int i = 1; i < nums.size(); i++)
         {
-
             curmax = max(nums[i], curmax + nums[i]);
             maxsum = max(maxsum, curmax);
 
