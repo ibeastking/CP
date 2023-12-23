@@ -1,3 +1,5 @@
+//? Difficulty -> Easy
+
 package Problems;
 
 import java.util.Scanner;
