@@ -7,7 +7,8 @@
 //! Leetcode Weekly Contest 329
 //! Do not overthink the questions, sometimes just fuck the time complexity
 
-#include <bits\stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class solution
