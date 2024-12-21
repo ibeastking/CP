@@ -76,6 +76,8 @@ public class Subtraction_in_Linked_List {
             Node res = ob.subLinkedList(LL1.head, LL2.head);
             printList(res);
         }
+
+        sc.close();
     }
 }
 
