@@ -1,4 +1,4 @@
-package LeetCode;
+package LC;
 
 class Solution {
     public int minOperations(String s) {

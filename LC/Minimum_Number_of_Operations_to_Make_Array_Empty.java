@@ -8,7 +8,7 @@
 
 //! Question Tag -> Array, HashTable, Greedy, Counting
 
-package LeetCode;
+package LC;
 
 import java.util.Arrays;
 import java.util.HashMap;

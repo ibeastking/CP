@@ -1,6 +1,6 @@
 //? Difficulty -> Easy
 
-package LeetCode;
+package LC;
 
 import java.util.HashSet;
 import java.util.Objects;

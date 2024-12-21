@@ -10,7 +10,7 @@
 
 //! Question Tag -> Array, HashTable
 
-package LeetCode;
+package LC;
 
 import java.util.List;
 import java.util.ArrayList;
